@@ -322,7 +322,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   AppearSound: {fileID: 6180467240251224549}
   TookSound: {fileID: 6762743476461586670}
-  Health: 10
+  Health: 30
 --- !u!1 &4890543234376111832
 GameObject:
   m_ObjectHideFlags: 0

@@ -11,7 +11,7 @@ public class Gun : MonoBehaviour
     
     public void Shoot()
     {
-        Instantiate(Bullet, BulletSpawnPoint.position, BulletSpawnPoint.rotation, GameManager.Instance.BulletHolder);
+        Instantiate(Bullet, BulletSpawnPoint.position, BulletSpawnPoint.rotation, GameManager.Instance.HolderManager.BulletHolder);
         ShootSound.Play();
 
         GameManager.Instance.GameStat.BulletShot++;

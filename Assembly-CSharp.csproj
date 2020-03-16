@@ -80,6 +80,7 @@
     <Compile Include="Assets\C#\Event\Event.cs" />
     <Compile Include="Assets\C#\Game\GameManager.cs" />
     <Compile Include="Assets\C#\Game\GameStat.cs" />
+    <Compile Include="Assets\C#\Holder\HolderManager.cs" />
     <Compile Include="Assets\C#\Menu\DeathMenu.cs" />
     <Compile Include="Assets\C#\Menu\ExitGame.cs" />
     <Compile Include="Assets\C#\Menu\Menu.cs" />
@@ -99,6 +100,7 @@
     <Compile Include="Assets\C#\Sound\DeathOnFinishDeath.cs" />
     <Compile Include="Assets\C#\Spawner\EntitySpawner.cs" />
     <Compile Include="Assets\C#\Spawner\SoundSpawner.cs" />
+    <Compile Include="Assets\C#\Spawner\SpawnerManager.cs" />
     <Compile Include="Assets\C#\Stat\PlayerBulletTaken.cs" />
     <Compile Include="Assets\C#\Stat\ShieldBulletTaken.cs" />
     <Compile Include="Assets\C#\StopWatch.cs" />

@@ -261,28 +261,12 @@ MonoBehaviour:
     BulletTakenPlayer: 0
     WalkDistance: 0
     EnemiesSpawned: 0
-  SoundHolder: {fileID: 1392817012}
-  BulletHolder: {fileID: 1587159975}
-  PlayerHolder: {fileID: 2043862109}
-  EnemyHolder: {fileID: 1392501383}
-  ParticuleHolder: {fileID: 104460687}
-  HealthDropHolder: {fileID: 788124449}
-  EnemySpawner: {fileID: 1237576858}
-  HealthDropSpawner: {fileID: 1211478767}
-  EnemySpawnPoint: {fileID: 422486028}
-  HealthSpawnPoint: {fileID: 1356246513}
-  PlayerPrefab: {fileID: 3725452225277004803, guid: 127a76677c7c2224ab821b46278d077c,
-    type: 3}
-  EnemyPrefab: {fileID: 2605972139996284807, guid: dc7c963d0186a0d4c8b85a75cbef4a14,
-    type: 3}
-  HealthDropPrefab: {fileID: 2687245402771749989, guid: 88ce844bbec60bb4ebb1e711ca1f4a36,
-    type: 3}
   PlayerInstance: {fileID: 1576744230}
   MenuManager: {fileID: 1722234891}
+  SpawnerManager: {fileID: 2096433187}
+  HolderManager: {fileID: 2142241299}
   CameraFollow: {fileID: 963194229}
   HeathTracker: {fileID: 1738237679}
-  EnemySpawnRate: 120
-  HealthDropSpawnRate: 400
 --- !u!82 &167254977
 AudioSource:
   m_ObjectHideFlags: 0
@@ -2704,6 +2688,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2096433186}
+  - component: {fileID: 2096433187}
   m_Layer: 0
   m_Name: Spanwer
   m_TagString: Untagged
@@ -2727,6 +2712,36 @@ Transform:
   m_Father: {fileID: 1835114082}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2096433187
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2096433185}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4fd3b582c6940a74cafd754a956d2f0c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  EnemySpawner: {fileID: 1237576858}
+  HealthDropSpawner: {fileID: 1211478767}
+  SoundHolder: {fileID: 1392817012}
+  BulletHolder: {fileID: 1587159975}
+  PlayerHolder: {fileID: 2043862109}
+  EnemyHolder: {fileID: 1392501383}
+  ParticuleHolder: {fileID: 104460687}
+  HealthDropHolder: {fileID: 788124449}
+  EnemySpawnPoint: {fileID: 422486028}
+  HealthSpawnPoint: {fileID: 1356246513}
+  PlayerPrefab: {fileID: 3725452225277004803, guid: 127a76677c7c2224ab821b46278d077c,
+    type: 3}
+  EnemyPrefab: {fileID: 2605972139996284807, guid: dc7c963d0186a0d4c8b85a75cbef4a14,
+    type: 3}
+  HealthDropPrefab: {fileID: 2687245402771749989, guid: 88ce844bbec60bb4ebb1e711ca1f4a36,
+    type: 3}
+  EnemySpawnRate: 120
+  HealthDropSpawnRate: 400
 --- !u!1 &2142241297
 GameObject:
   m_ObjectHideFlags: 0
@@ -2736,6 +2751,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2142241298}
+  - component: {fileID: 2142241299}
   m_Layer: 0
   m_Name: Holder
   m_TagString: Untagged
@@ -2763,6 +2779,24 @@ Transform:
   m_Father: {fileID: 1835114082}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2142241299
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2142241297}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8880920d16fd9e14b809c27b623d1ae7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SoundHolder: {fileID: 1392817012}
+  BulletHolder: {fileID: 1587159975}
+  PlayerHolder: {fileID: 2043862109}
+  EnemyHolder: {fileID: 1392501383}
+  ParticuleHolder: {fileID: 104460687}
+  HealthDropHolder: {fileID: 788124449}
 --- !u!1001 &5173236530135149558
 PrefabInstance:
   m_ObjectHideFlags: 0

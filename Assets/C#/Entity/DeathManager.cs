@@ -11,7 +11,7 @@ public class DeathManager : MonoBehaviour
     {        
         if (this.gameObject != null)
         {
-            Instantiate(DeathParticule, this.transform.position, Quaternion.identity, GameManager.Instance.ParticuleHolder);
+            Instantiate(DeathParticule, this.transform.position, Quaternion.identity, GameManager.Instance.HolderManager.ParticuleHolder);
 
             SS.Spawn(this.transform.position);
 
