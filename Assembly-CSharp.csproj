@@ -86,6 +86,7 @@
     <Compile Include="Assets\C#\Menu\Menu.cs" />
     <Compile Include="Assets\C#\Menu\MenuManager.cs" />
     <Compile Include="Assets\C#\Menu\RestartGame.cs" />
+    <Compile Include="Assets\C#\Menu\SlideController.cs" />
     <Compile Include="Assets\C#\Menu\StartGame.cs" />
     <Compile Include="Assets\C#\ObjectPooler.cs" />
     <Compile Include="Assets\C#\Player\HealthBar.cs" />
@@ -96,6 +97,7 @@
     <Compile Include="Assets\C#\Player\PlayerPreference.cs" />
     <Compile Include="Assets\C#\Player\Shield.cs" />
     <Compile Include="Assets\C#\Rotator.cs" />
+    <Compile Include="Assets\C#\ScreenShot\ScreenShot.cs" />
     <Compile Include="Assets\C#\Setting\KeyInputSet.cs" />
     <Compile Include="Assets\C#\Sound\DeathOnFinishDeath.cs" />
     <Compile Include="Assets\C#\Spawner\EntitySpawner.cs" />

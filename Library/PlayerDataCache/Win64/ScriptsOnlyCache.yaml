@@ -8,6 +8,7 @@ ScriptsOnlyBuild:
     - DeathLimit
     - DeathManager
     - DeathMenu
+    - DeathOnFinishDeath
     - EntitySpawner
     - ExitGame
     - FollowPlayer
@@ -16,14 +17,23 @@ ScriptsOnlyBuild:
     - Gun
     - Health
     - HealthBar
+    - HealthDrop
+    - HealthEater
     - HealthTracker
+    - HolderManager
+    - MenuManager
     - PlayerBulletTaken
     - PlayerController
     - PlayerLookCursor
     - RestartGame
+    - Rotator
+    - ScreenShot
     - Shield
     - ShieldBulletTaken
     - Shooter
+    - SlideController
+    - SoundSpawner
+    - SpawnerManager
     - StartGame
     Unity.Rider.Editor.dll:
     - Packages.Rider.Editor.UnitTesting.CallbackData
@@ -38,6 +48,7 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.CanvasScaler
     - UnityEngine.UI.GraphicRaycaster
     - UnityEngine.UI.Image
+    - UnityEngine.UI.Slider
     - UnityEngine.UI.Text
   sceneClasses:
     Assets/Scenes/Game.unity:
@@ -65,6 +76,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 65
       Script: {instanceID: 0}
+    - Class: 74
+      Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
     - Class: 82
@@ -72,6 +85,10 @@ ScriptsOnlyBuild:
     - Class: 83
       Script: {instanceID: 0}
     - Class: 89
+      Script: {instanceID: 0}
+    - Class: 91
+      Script: {instanceID: 0}
+    - Class: 95
       Script: {instanceID: 0}
     - Class: 104
       Script: {instanceID: 0}
@@ -82,61 +99,79 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11152}
     - Class: 114
+      Script: {instanceID: 11164}
+    - Class: 114
+      Script: {instanceID: 11242}
+    - Class: 114
       Script: {instanceID: 11260}
     - Class: 114
-      Script: {instanceID: 11310}
+      Script: {instanceID: 11268}
     - Class: 114
-      Script: {instanceID: 11350}
+      Script: {instanceID: 11318}
     - Class: 114
-      Script: {instanceID: 11372}
+      Script: {instanceID: 11358}
     - Class: 114
-      Script: {instanceID: 11468}
+      Script: {instanceID: 11380}
     - Class: 114
-      Script: {instanceID: 11584}
+      Script: {instanceID: 11444}
     - Class: 114
-      Script: {instanceID: 11720}
+      Script: {instanceID: 11458}
     - Class: 114
-      Script: {instanceID: 11744}
+      Script: {instanceID: 11482}
     - Class: 114
-      Script: {instanceID: 11890}
+      Script: {instanceID: 11542}
     - Class: 114
-      Script: {instanceID: 12124}
+      Script: {instanceID: 11602}
     - Class: 114
-      Script: {instanceID: 12202}
+      Script: {instanceID: 11678}
     - Class: 114
-      Script: {instanceID: 12420}
+      Script: {instanceID: 11724}
     - Class: 114
-      Script: {instanceID: 12432}
+      Script: {instanceID: 11742}
     - Class: 114
-      Script: {instanceID: 12442}
+      Script: {instanceID: 11766}
     - Class: 114
-      Script: {instanceID: 12608}
+      Script: {instanceID: 11866}
     - Class: 114
-      Script: {instanceID: 12692}
+      Script: {instanceID: 11914}
     - Class: 114
-      Script: {instanceID: 12960}
+      Script: {instanceID: 11936}
     - Class: 114
-      Script: {instanceID: 12962}
+      Script: {instanceID: 11960}
     - Class: 114
-      Script: {instanceID: 17822}
+      Script: {instanceID: 11976}
     - Class: 114
-      Script: {instanceID: 50682}
+      Script: {instanceID: 12066}
     - Class: 114
-      Script: {instanceID: 53930}
+      Script: {instanceID: 12158}
     - Class: 114
-      Script: {instanceID: 53932}
+      Script: {instanceID: 12206}
     - Class: 114
-      Script: {instanceID: 58168}
+      Script: {instanceID: 12238}
     - Class: 114
-      Script: {instanceID: 58180}
+      Script: {instanceID: 12436}
     - Class: 114
-      Script: {instanceID: 58218}
+      Script: {instanceID: 12458}
     - Class: 114
-      Script: {instanceID: 58230}
+      Script: {instanceID: 12462}
     - Class: 114
-      Script: {instanceID: 70152}
+      Script: {instanceID: 12474}
     - Class: 114
-      Script: {instanceID: 70158}
+      Script: {instanceID: 12484}
+    - Class: 114
+      Script: {instanceID: 12502}
+    - Class: 114
+      Script: {instanceID: 12652}
+    - Class: 114
+      Script: {instanceID: 12720}
+    - Class: 114
+      Script: {instanceID: 12730}
+    - Class: 114
+      Script: {instanceID: 12740}
+    - Class: 114
+      Script: {instanceID: 13010}
+    - Class: 114
+      Script: {instanceID: 13012}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -183,19 +218,23 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11152}
     - Class: 114
-      Script: {instanceID: 11310}
+      Script: {instanceID: 11318}
     - Class: 114
-      Script: {instanceID: 11350}
+      Script: {instanceID: 11358}
     - Class: 114
-      Script: {instanceID: 11744}
+      Script: {instanceID: 11420}
     - Class: 114
-      Script: {instanceID: 11952}
+      Script: {instanceID: 11766}
     - Class: 114
-      Script: {instanceID: 12124}
+      Script: {instanceID: 11984}
     - Class: 114
-      Script: {instanceID: 12608}
+      Script: {instanceID: 12158}
     - Class: 114
-      Script: {instanceID: 12960}
+      Script: {instanceID: 12652}
+    - Class: 114
+      Script: {instanceID: 13010}
+    - Class: 114
+      Script: {instanceID: 13044}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -227,6 +266,12 @@ ScriptsOnlyBuild:
     className: CanvasScaler
   - hash:
       serializedVersion: 2
+      Hash: f12c937d01c6eae10b7548b49434d9f8
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: HealthBar
+  - hash:
+      serializedVersion: 2
       Hash: 3c08375166df118bd1801438fc36b92f
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
@@ -245,10 +290,28 @@ ScriptsOnlyBuild:
     className: TMP_Dropdown
   - hash:
       serializedVersion: 2
+      Hash: 26fe8d64d18a6adb64611d959c11fe05
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: PlayerFinder
+  - hash:
+      serializedVersion: 2
+      Hash: dc5aab03c952ec32c3f68e8677393d79
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: DeathOnFinishDeath
+  - hash:
+      serializedVersion: 2
       Hash: e7a73f5f78ba6445195ec23b74a1ce2d
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TMP_ScrollbarEventHandler
+  - hash:
+      serializedVersion: 2
+      Hash: 151521a44b88edd21baefde0e1a0cae0
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: HealthDrop
   - hash:
       serializedVersion: 2
       Hash: 039c32dbc64676339e77d939d85981ab
@@ -323,6 +386,24 @@ ScriptsOnlyBuild:
     className: GridLayoutGroup
   - hash:
       serializedVersion: 2
+      Hash: 0788ae6349ae3c02c1dbc58644634c33
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: SlideController
+  - hash:
+      serializedVersion: 2
+      Hash: d2d2b6c2312abaad560e8beddccaf015
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: SpawnerManager
+  - hash:
+      serializedVersion: 2
+      Hash: 7175a88f3eee65b2c801f81c9e7629c2
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: DeathMenu
+  - hash:
+      serializedVersion: 2
       Hash: 8aa3d6ccbcb54ee8db6c1229854adaaa
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
@@ -341,7 +422,7 @@ ScriptsOnlyBuild:
     className: LayoutElement
   - hash:
       serializedVersion: 2
-      Hash: 175565a58e5012a1bf3bc2973211f802
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: EntitySpawner
@@ -363,6 +444,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: AnimationTrack
+  - hash:
+      serializedVersion: 2
+      Hash: 7b23eab0455a7931ce0f49da35f762d1
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ScreenShot
   - hash:
       serializedVersion: 2
       Hash: cf9f5cf2c3145a37ac07f00e50e460f9
@@ -401,10 +488,22 @@ ScriptsOnlyBuild:
     className: Mask
   - hash:
       serializedVersion: 2
+      Hash: 9b1c23a90615bc2414e108635c1c97dd
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Shield
+  - hash:
+      serializedVersion: 2
       Hash: caa533b001ae39b864ba8425019e2268
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: Shadow
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ExitGame
   - hash:
       serializedVersion: 2
       Hash: 3cbdfa5810f9265421940cfdbe1ff9e8
@@ -443,10 +542,22 @@ ScriptsOnlyBuild:
     className: Selectable
   - hash:
       serializedVersion: 2
-      Hash: b08e1023b9cf43c8a5b394d3f3f415f9
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ShieldBulletTaken
+  - hash:
+      serializedVersion: 2
+      Hash: 209a81795a8229e33f4878007b9d19eb
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: FollowTarget
+  - hash:
+      serializedVersion: 2
+      Hash: 35757acf1ec5f5338137cfb20cb6e1c6
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: SoundSpawner
   - hash:
       serializedVersion: 2
       Hash: b3ab2106268377ffe25dd18ac23dca28
@@ -455,10 +566,22 @@ ScriptsOnlyBuild:
     className: TMP_Asset
   - hash:
       serializedVersion: 2
+      Hash: d8ef3a1664f1c770c5eb2b3d80bdeeb6
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: HealthTracker
+  - hash:
+      serializedVersion: 2
       Hash: d4020bafcd3ccbb5601a6e6c8ac78be0
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: ScrollRect
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: DeathLimit
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -477,6 +600,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TMP_SpriteAnimator
+  - hash:
+      serializedVersion: 2
+      Hash: d22095465b3c26856bac4ea6f7f2381c
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: HealthEater
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -501,6 +630,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: RawImage
+  - hash:
+      serializedVersion: 2
+      Hash: 03f8e02f579300411e54c236809637e2
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: MenuManager
   - hash:
       serializedVersion: 2
       Hash: 18b32a971240d18df9d408920360e7cf
@@ -557,7 +692,19 @@ ScriptsOnlyBuild:
     className: Physics2DRaycaster
   - hash:
       serializedVersion: 2
-      Hash: 7cd83118db901cb399ce8f4709a23718
+      Hash: 0238e868f7d197859a391ce379baf5a4
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: GameManager
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: RestartGame
+  - hash:
+      serializedVersion: 2
+      Hash: c893401b4f2f4dbdd1a8d62adfce4b06
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: DeathManager
@@ -579,6 +726,12 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: FollowPlayer
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: PlayerBulletTaken
   - hash:
       serializedVersion: 2
       Hash: 5c7440246285ccc9fc7fa7f2fcfd389e
@@ -609,6 +762,18 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.TestRunner.dll
     namespaceName: UnityEngine.TestTools
     className: BeforeAfterTestCommandState
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Rotator
+  - hash:
+      serializedVersion: 2
+      Hash: 22ebd39561a97fa20d7f8789e9ef2d0b
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: HolderManager
   - hash:
       serializedVersion: 2
       Hash: af8ae4ff8054b69492873509156e2505
@@ -695,7 +860,7 @@ ScriptsOnlyBuild:
     className: StandaloneInputModule
   - hash:
       serializedVersion: 2
-      Hash: a20d88a703df52f49b7e5c8663413a7c
+      Hash: aaa7e7fd415114b3b243b3a618492d76
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: CameraFollow
@@ -735,72 +900,6 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
-  - hash:
-      serializedVersion: 2
-      Hash: 26fe8d64d18a6adb64611d959c11fe05
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: PlayerFinder
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: DeathLimit
-  - hash:
-      serializedVersion: 2
-      Hash: 9b1c23a90615bc2414e108635c1c97dd
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: Shield
-  - hash:
-      serializedVersion: 2
-      Hash: f12c937d01c6eae10b7548b49434d9f8
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: HealthBar
-  - hash:
-      serializedVersion: 2
-      Hash: d8ef3a1664f1c770c5eb2b3d80bdeeb6
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: HealthTracker
-  - hash:
-      serializedVersion: 2
-      Hash: 5a78eb884eadac4e98020fe09c727069
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: GameManager
-  - hash:
-      serializedVersion: 2
-      Hash: d40fb311f61fbef33807687a6bd16a6a
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: DeathMenu
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: PlayerBulletTaken
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: ShieldBulletTaken
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: RestartGame
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: ExitGame
   platform: 19
   scenePathNames:
   - Assets/Scenes/Menu.unity
